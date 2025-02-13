@@ -1,7 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"github.com/abhishekkushwahaa/AttendX/config"
+	"github.com/abhishekkushwahaa/AttendX/db"
+	"github.com/abhishekkushwahaa/AttendX/routes"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	fmt.Println("Hello From Backend...")
+	config.LoadEnv()
+	db.InitDB()
+
+	r := gin.Default()
+
+	r.POST("/register", routes.Register)
+	r.POST("/login", routes.Login)
+	routes.AttendanceRoutes(r)
+
+	r.Run(":8080")
 }
