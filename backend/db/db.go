@@ -9,8 +9,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-var UserColl *mongo.Collection
-var AttendColl *mongo.Collection
+var DB *mongo.Database
 
 func InitDB() {
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(os.Getenv("MONGO_URI")))
@@ -18,6 +17,5 @@ func InitDB() {
 		log.Fatal("MongoDB Connection Error:", err)
 	}
 
-	UserColl = client.Database("attendance").Collection("users")
-	AttendColl = client.Database("attendance").Collection("attendance")
+	DB = client.Database("AttendX")
 }

@@ -3,7 +3,7 @@ package models
 import "time"
 
 type Attendance struct {
-	Username  string    `bson:"username"`
-	Timestamp time.Time `bson:"timestamp"`
-	Method    string    `bson:"method"`
+	UserID    string    `json:"user_id" bson:"user_id"`
+	Timestamp time.Time `json:"timestamp" bson:"timestamp"`
+	Status    bool      `json:"status" bson:"status"`
 }

@@ -12,10 +12,6 @@ func main() {
 	db.InitDB()
 
 	r := gin.Default()
-
-	r.POST("/register", routes.Register)
-	r.POST("/login", routes.Login)
-	routes.AttendanceRoutes(r)
-
-	r.Run(":8080")
+	routes.RegisterRoutes(r)
+	r.Run(":8081")
 }
