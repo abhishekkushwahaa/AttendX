@@ -4,7 +4,7 @@ AttendX is a web application that allows employees to Mark their attendance via 
 
 ## Features
 
-- **Biometric Attendance**: Employees can mark their attendance using Biometric.
+- **Biometric**: Employees can verify their identity using Biometric.
 - **Face Recognition**: Employees can mark their attendance using Face Recognition.
 - **Employee Panel**: Employees can view their attendance history.
 
@@ -12,11 +12,11 @@ AttendX is a web application that allows employees to Mark their attendance via 
 
 - **Frontend**: React
 - **Backend**: Golang
-- **Database**: MySQL
+- **Database**: MongoDB or DynamoDB
 - **Biometric**: WebAuthn
-- **Face Recognition**: OpenCV
+- **Face Recognition**: AWS Rekognition
 - **Deployment**: Docker
 
 ## Architecture
 
-![Architecture](/public/AttendX.png)
+![Architecture](/public/AttendX1.png)
